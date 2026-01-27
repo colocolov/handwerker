@@ -1,0 +1,46 @@
+$bgc: #D6D8D7
+$white: #F0F0F0
+$text: #2F2F2F
+$alabaster: #D6D8D7
+$grey: #4F5E75
+$red: #EB5C20
+$black: #354053
+
+// добавлять и удалять
+$gradient-dark: linear-gradient(180deg, #002535 0%, transparent 100%) #003851
+
+// анимация
+$cubic: all 0.7s cubic-bezier(0.76, -0.76, 0.25, 1.26)
+
+// переменные по умолчанию
+$containerPadding: 15
+$contentWidth: 1360
+$containerWidth: $contentWidth + $containerPadding * 2
+$minWidth: 320
+
+// Media 
+$pcw: 1389.98px
+$desktop: 1129.98px // большие мониторы
+$pc: 1023.98px // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: 991.98px // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98px // Телефоны L - 768px
+$mobileMid: 575.98px // Телефоны M - 576px
+$mobileSmall: 479.98px // Телефоны S - 480px
+
+:root
+  --widthscrollbar: 17px
+  // **********************************************
+  // СДЕЛАТЬ ВЕРХНИЙ И НИЖНИЙ ОТСТУП У SECTION
+  --sectionPaddingTop: 80px
+  --sectionPaddingBottom: 80px
+  // ---------------- END
+
+%body
+  font-family: $font-first
+  @include font(500, 16, calc(16 * 1.2))
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+%head
+  font-family: $font-first
+  @include font(700, 48, calc(48 * 1.2))
