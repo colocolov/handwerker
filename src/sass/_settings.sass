@@ -112,6 +112,25 @@ input
     // z-index: -5
     // position: fixed
 
+.circle
+  position: relative
+  width: 34px
+  height: 34px
+  border-radius: 50%
+  display: grid
+  place-items: center
+  background: conic-gradient(
+    $alabaster 0deg 90deg,   // светло-серый
+    $red 90deg 180deg,  // оранжевый
+  #212531 180deg 270deg,
+  #44536a 270deg 360deg
+  )
+  &__inner
+    width: 80% // 88/110
+    height: 80% // 88/110
+    border-radius: 50%
+    background-color: $white
+
 .icon-svg
   display: inline-block
   fill: transparent
