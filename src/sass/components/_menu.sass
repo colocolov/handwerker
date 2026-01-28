@@ -72,13 +72,13 @@
 
     // submenu TEST
     & li a
-      padding: 20px
+      padding: 8px
       display: flex
       justify-content: space-between
       transition: background-color 0.3s ease
       @media (any-hover: hover) and (pointer: fine)
       &:hover
-        background-color: lighten($black, 3)
+        //background-color: lighten($black, 3)
         &:last-child a
           color: $white
       @include mediaNotebook
@@ -130,28 +130,29 @@
     position: relative
     @include fx-all
     flex-wrap: wrap
-    @include font(600, 16, 20)
-    color: $text // ---------- ЦВЕТ ССЫЛОК НА ДЕСКТОПЕ
-    text-transform: uppercase
+    @include font(500, 20, 20)
+    color: $grey // ---------- ЦВЕТ ССЫЛОК НА ДЕСКТОПЕ
+    // text-transform: uppercase
     transition: color 0.3s ease
     // &:not(:last-child)
     //   margin-right: 39px
     // ---------- НИЖНЯЯ ЛИНЯЯ ПРИ НАВЕДЕНИИ
-    &::before
-      position: absolute
-      content: ''
-      display: block
-      bottom: -6px
-      width: 0%
-      height: 2px
-      background-color: $white
-      transition: width 0.5s ease
+    // &::before
+    //   position: absolute
+    //   content: ''
+    //   display: block
+    //   bottom: -6px
+    //   width: 0%
+    //   height: 2px
+    //   background-color: $white
+    //   transition: width 0.5s ease
     @media (any-hover: hover) and (pointer: fine)
       &:hover
-        &::before
-          width: 100%
-        &:last-child a
-          color: $white
+        color: $red
+        // &::before
+        //   width: 100%
+        // &:last-child a
+        //   color: $red
 
     // уточнить!!!
     // &:last-child a
