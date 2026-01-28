@@ -1,6 +1,6 @@
 @media ( min-width: 992px )
   .benefits__arrow
-            // имя  / продолжительность / ?? / ?? / время задерржки 
+    // имя  / продолжительность / ?? / ?? / время задерржки 
     animation: move-down 5s infinite linear
     // снимает дергание анимации
     backface-visibility: hidden
@@ -29,3 +29,9 @@
   100%
     opacity: 1
     transform: translateX(0px)
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)

@@ -1,0 +1,47 @@
+.advantage
+  padding-top: var(--sectionPaddingTop)
+  padding-bottom: var(--sectionPaddingBottom)
+
+  &__head
+    margin-bottom: 80px
+
+  &__list
+    display: flex
+    gap: 50px
+    align-items: flex-start
+    justify-content: space-between
+    @include mediaDesktop
+      flex-wrap: wrap
+
+  &__item
+    flex-grow: 1
+    flex-shrink: 0
+    max-width: 255px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        & .advantage__img
+          transform: scale(1.05)
+    @include mediaDesktop
+      flex-basis: 47%
+      max-width: unset
+    @include mediaTablet
+      flex-basis: 46%
+
+  &__img
+    width: 48px
+    height: 48px
+    margin-bottom: 20px
+    transition: transform 0.7s ease-in
+    img
+      width: 100%
+      height: 100%
+
+  &__text
+    width: 100%
+
+  // &__
+  // &__
+  // &__

@@ -1,5 +1,6 @@
 .hero
   padding-top: 20px
+  padding-bottom: var(--sectionPaddingBottom)
   --height: 800px
 
   // position: relative
@@ -38,11 +39,15 @@
     flex-direction: column
     justify-content: flex-end
     background-color: $alabaster
-    padding: 40px
+    padding: 40px 20px 40px 40px
 
   &__title
     max-width: 70% // 555/670
     margin-bottom: 40px
+    @include mediaNotebook
+      font-size: 36px
+      line-height: 1.1
+
 
   &__subtitle
     margin-bottom: 80px
@@ -50,11 +55,16 @@
     color: $grey
     font-weight: 500
     max-width: 69% // 555/670
+    @include mediaNotebook
+      font-size: 28px
 
   &__btns
     display: flex
     align-items: center
     justify-content: space-between
+    gap: 20px
+    flex-wrap: wrap
+    @include mediaNotebook
 
   &__year
     display: flex
@@ -64,24 +74,28 @@
       font-size: 24px
       font-weight: 700
       color: $grey
+      max-width: 126px
 
   &__circle
-    font-size: 48px
-    font-weight: 700
-    letter-spacing: -0.01em
-    color: $grey
-    line-height: 46%
-    width: 110px
-    height: 110px
-    display: flex
-    align-items: center
-    justify-content: center
+    position: relative
     flex-shrink: 0
     &-text
+      display: flex
+      align-items: center
+      justify-content: center
+      font-weight: 700
+      letter-spacing: -0.01em
+      color: $grey
+      line-height: 46%
+      font-size: 48px
       position: absolute
       top: 50%
       left: 50%
       transform: translate(-50%, -45%)
+      z-index: 3
+    & .circle
+      width: 110px
+      height: 110px
 
   &__img
     padding-bottom: 63.235294% // 860/1360
