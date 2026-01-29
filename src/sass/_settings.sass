@@ -113,7 +113,7 @@ input
     // position: fixed
 
 .circle
-  // position: relative
+  position: relative
   width: 34px
   height: 34px
   border-radius: 50%
@@ -131,8 +131,12 @@ input
   #212531 180deg 270deg,
   #44536a 270deg 360deg)
   &__inner
-    width: 80% // 88/110
-    height: 80% // 88/110
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-49%, -49%)
+    width: 79.4% // 88/110
+    height: 79.4% // 88/110
     border-radius: 50%
     background-color: $white
 

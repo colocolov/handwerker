@@ -1,0 +1,47 @@
+.about
+  padding-top: var(--sectionPaddingTop)
+  //padding-bottom: var(--sectionPaddingBottom)
+
+  &__container
+    background: url("../images/bg/men.png") left bottom -5px / contain no-repeat
+  &__head
+  &__wrap
+    display: flex
+    align-items: stretch
+    gap: 20px
+    padding-bottom: 78px
+
+  &__contact
+    flex-basis: 48%
+    flex-grow: 1
+    height: auto
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    // a
+    //   margin-top: auto
+
+  &__description
+    flex-basis: 48%
+    flex-grow: 1
+
+  &__us
+    background-color: $alabaster
+    border-radius: 20px
+    padding: 20px
+    padding-right: 90px
+    margin-bottom: 20px
+
+  &__text
+    margin-top: 20px
+    p,
+    ul
+      &:not(:last-child)
+        margin-bottom: 20px
+    ul
+      margin-left: 15px
+  &__charge
+    background-color: $grey
+    border-radius: 20px
+    padding: 20px
+    color: $white
