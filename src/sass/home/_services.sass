@@ -1,0 +1,70 @@
+.services
+  padding-top: 80px
+  padding-bottom: 80px
+  background: url("../images/bg/services.jpg") center / cover no-repeat
+
+  & .container-right
+    box-sizing: border-box
+    width: 100%
+
+  &__head
+    color: $white
+    margin-bottom: 40px
+
+  &__slider
+    margin-bottom: 50px
+    height: 530px
+    width: 100%
+    border-radius: 25px
+    overflow: hidden
+    // position: relative
+    // max-height: 530px
+    &-wrap
+      box-sizing: border-box
+      height: 530px
+      column-gap: 0
+      // width: 100%
+      // display: flex
+  &__slide
+    background-color: $bgc
+    height: 530px
+    overflow: hidden
+    border-radius: 25px
+    padding: 20px 20px 40px
+    width: 400px
+    display: flex
+    flex-direction: column
+    max-width: 390px
+  &__img
+    height: 280px
+    border-radius: 15px
+    margin-bottom: 20px
+    overflow: hidden
+  &__name
+    font-size: 32px
+    font-weight: 700
+    padding-bottom: 10px
+    color: $grey
+    margin-bottom: 10px
+    border-bottom: 1px solid $text
+  &__descr
+    font-size: 20px
+  &__navigation
+
+  &__btns
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    height: 22px
+    width: 25px
+    cursor: pointer
+    z-index: 12
+  &--prev
+    left: calc(50% - 553px)
+  &--next
+    right: calc(50% - 553px)
+    transform: rotate(180deg) translateY(50%)
+
+  &__btn
+    display: flex
+    justify-content: center

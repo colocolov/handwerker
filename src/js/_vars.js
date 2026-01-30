@@ -1,3 +1,3 @@
 export default {
-  heroSliderEl: document.querySelector(".hero__slider"),
+  servicesSliderEl: document.querySelector(".services__slider"),
 };
