@@ -1,14 +1,14 @@
 // https://swiperjs.com/swiper-api
 
 import _vars from "../_vars.js";
-import Swiper, { Navigation, Autoplay, FreeMode } from "swiper";
+import Swiper, { Navigation, } from "swiper";
 
-Swiper.use([Autoplay, Navigation, FreeMode]);
+Swiper.use([Navigation]);
 
-if (_vars.servicesSliderEl) {
+if (_vars.linksSliderEl) {
 
   // слайдер на главной
-  new Swiper(_vars.servicesSliderEl, {
+  new Swiper(_vars.linksSliderEl, {
     loop: true,
     // autopl?ay: {
       //пауза между прокруткой
@@ -22,8 +22,8 @@ if (_vars.servicesSliderEl) {
     // speed: 800,
     // навигация по стрелкам
     navigation: {
-      nextEl: ".services--next",
-      prevEl: ".services--prev",
+      nextEl: ".links--next",
+      prevEl: ".links--prev",
       // disabledClass: "stories-button__unactive",
       clickable: true,
       // для ппрвильного направления
@@ -32,23 +32,16 @@ if (_vars.servicesSliderEl) {
     slidesPerView: 3,
     // расстояние между слайдами
     // spaceBetween: gap, // свой размер
-    spaceBetween: 20,
+    spaceBetween: 80,
     // кол-во пролистываемых слайдов
     slidesPerGroup: 1,
     // стартовый слайд
     initialSlide: 0,
     // freeMode: true,
     // активный слайд по центру
-    // centeredSlides: true,
+    centeredSlides: true,
     
-    // адаптив
-    // breakpoints: {
-      // when window width is >= 320px
-    //   480: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20,
-    //   },
-    // },
+ 
 
     //отложенная загрузка:
     //отключаем презагрузку картинок

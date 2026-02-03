@@ -1,0 +1,45 @@
+.links
+  padding-top: var(--sectionPaddingTop)
+  padding-bottom: var(--sectionPaddingBottom)
+  border-bottom-left-radius: 25px
+  border-bottom-right-radius: 25px
+  overflow: hidden
+  z-index: 2
+  position: relative
+  background-color: $bgc
+
+  &__container
+
+  &__head
+    text-align: center
+    margin-bottom: 40px
+
+  &__slider
+    height: 580px
+    margin-bottom: 40px
+    &-wrap
+      // display: flex
+      // gap: 80px
+  &__slide
+    height: 500px
+    width: 400px
+    border-radius: 15px
+    overflow: hidden
+    &.swiper-slide-active
+      margin-top: 80px
+    &._ibg img
+      position: relative
+  &__navigation
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 10
+    gap: 120px
+
+  &--prev
+    background-color: $white
+    box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.02), 3px 12px 15px 0 rgba(0, 0, 0, 0.04), 8px 29px 40px 0 rgba(0, 0, 0, 0.05), 16px 58px 91px 0 rgba(0, 0, 0, 0.07)
+  &--next
+    background-color: $white
+    box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.02), 3px 12px 15px 0 rgba(0, 0, 0, 0.04), 8px 29px 40px 0 rgba(0, 0, 0, 0.05), 16px 58px 91px 0 rgba(0, 0, 0, 0.07)

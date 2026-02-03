@@ -6,6 +6,7 @@
   & .container-right
     box-sizing: border-box
     width: 100%
+    position: relative
 
   &__head
     color: $white
@@ -15,7 +16,8 @@
     margin-bottom: 50px
     height: 530px
     width: 100%
-    border-radius: 25px
+    border-top-left-radius: 25px
+    border-bottom-left-radius: 25px
     overflow: hidden
     // position: relative
     // max-height: 530px
@@ -50,6 +52,22 @@
   &__descr
     font-size: 20px
   &__navigation
+    position: absolute
+    top: 0
+    left: 85.5%
+    z-index: 10
+    @include mediaDesk
+      left: 85.5% // 150/1240
+    @include mediaNotebook
+      left: 83% // 150/1240
+    @include mediaTablet
+      left: 80% // 150/1240
+    @include mediaPhone
+      position: relative
+      left: unset
+      justify-content: center
+      margin-bottom: 32px
+
 
   &__btns
     position: absolute
@@ -60,10 +78,10 @@
     cursor: pointer
     z-index: 12
   &--prev
-    left: calc(50% - 553px)
+    // left: calc(50% - 553px)
   &--next
-    right: calc(50% - 553px)
-    transform: rotate(180deg) translateY(50%)
+    // right: calc(50% - 553px)
+    // transform: rotate(180deg) translateY(50%)
 
   &__btn
     display: flex
