@@ -1,13 +1,26 @@
 .bgimg
   height: 430px
   overflow: hidden
+  position: relative
+  width: 100%
   margin-top: -30px
   &__img
     height: 100%
+    // paralax
+    position: absolute
+    inset: 0
+    will-change: transform
+    transform: translate3d(0, 0, 0)
     img
-      height: 100%
-      background-position: center
-      object-fit: cover
       width: 100%
-        // position: relative
+      object-fit: cover
+      // height: 100%
+      // background-position: center
+      //paralax
+      position: absolute
+      inset: 0
+      height: 120%
+      object-position: center
+      user-select: none
+      pointer-events: none
 
