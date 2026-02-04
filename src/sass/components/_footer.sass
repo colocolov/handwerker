@@ -1,14 +1,20 @@
 .footer
   background-color: #44536A
   padding-top: 50px
-  padding-bottom: var(--sectionPaddingBottom)
+  padding-bottom: 80px
   color: $alabaster
 
   &__container
+    display: flex
+    align-items: flex-star
+    justify-content: space-between
+    gap: 20px
   &__content
     display: flex
     flex-direction: column
     align-items: flex-start
+    justify-content: space-between
+    gap: 20px
   &__logo
     width: 150px
   &__data
@@ -16,9 +22,19 @@
     flex-direction: column
     align-items: flex-start
   &__link
+    font-size: 36px
+    font-weight: 600
+    transition: color 0.5s ease-in, padding-left 0.5s ease-in
+    &:not(:last-child)
+      margin-bottom: 30px
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        color: $white
+        // letter-spacing: 0.005em
+        padding-left: 2px
 
   &__item
-    transition: color 0.3s ease
+    transition: color 0.5s ease
     &:not(:last-child)
       margin-bottom: 19px
     a
@@ -26,5 +42,14 @@
 
 
   &__form
+    flex-basis: 49%
 
 
+.subfooter
+  padding-top: 34px
+  padding-bottom: 34px
+  &__container
+    display: flex
+    align-items: center
+  &__img
+    margin: 0 auto
