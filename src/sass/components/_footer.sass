@@ -9,6 +9,8 @@
     align-items: flex-star
     justify-content: space-between
     gap: 20px
+    @include mediaPhone
+      flex-direction: column-reverse
   &__content
     display: flex
     flex-direction: column
@@ -17,6 +19,7 @@
     gap: 20px
   &__logo
     width: 150px
+    margin-bottom: 50px
   &__data
     display: flex
     flex-direction: column
@@ -32,6 +35,12 @@
         color: $white
         // letter-spacing: 0.005em
         padding-left: 2px
+    @include mediaTablet
+      font-size: 32px
+    @include mediaPhone
+      font-size: 28px
+    @include mediaPhoneMid
+      font-size: 22px
 
   &__item
     transition: color 0.5s ease
@@ -43,6 +52,8 @@
 
   &__form
     flex-basis: 49%
+    @include mediaPhone
+      margin-bottom: 25px
 
 
 .subfooter

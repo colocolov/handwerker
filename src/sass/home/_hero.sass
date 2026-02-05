@@ -17,9 +17,14 @@
   //   height: 100%
   //   background: $gradient-dark
   //   z-index: 1
+  @include mediaTablet
+    height: auto
+    min-height: unset
+
   @include mediaPhone
-    --height: 600px
-    height: var(--height)
+    margin-top: 100px
+    // --height: 600px
+    // height: var(--height)
 
   &__container
     display: flex
@@ -28,7 +33,8 @@
     // flex-direction: column
     // z-index: 2
     gap: 20px
-
+    @include mediaPhone
+      flex-direction: column-reverse
   &__left
     flex-basis: 49%
     flex-grow: 1
@@ -40,6 +46,10 @@
     justify-content: flex-end
     background-color: $alabaster
     padding: 40px 20px 40px 40px
+    @include mediaPhone
+      margin-bottom: 20px
+    @include mediaPhoneMid
+      padding: 15px
 
   &__title
     max-width: 70% // 555/670
@@ -47,7 +57,8 @@
     @include mediaNotebook
       font-size: 36px
       line-height: 1.1
-
+    @include mediaTablet
+      max-width: unset
 
   &__subtitle
     margin-bottom: 80px
@@ -57,6 +68,10 @@
     max-width: 69% // 555/670
     @include mediaNotebook
       font-size: 28px
+    @include mediaTablet
+      max-width: unset
+    @include mediaPhone
+      font-size: 22px
 
   &__btns
     display: flex
@@ -65,6 +80,11 @@
     gap: 20px
     flex-wrap: wrap
     @include mediaNotebook
+
+  &__btn
+    @include mediaPhone
+      margin: 0 20px
+
 
   &__year
     display: flex
@@ -75,6 +95,8 @@
       font-weight: 700
       color: $grey
       max-width: 126px
+      @include mediaPhone
+        max-width: unset
 
   &__circle
     position: relative
@@ -106,3 +128,5 @@
     overflow: hidden
     border-radius: 25px
     flex-shrink: 0
+    @include mediaPhone
+      padding-bottom: 80.555556% // 290/360

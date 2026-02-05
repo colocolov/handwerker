@@ -4,6 +4,8 @@
 
   &__head
     margin-bottom: 80px
+    @include mediaPhone
+      margin-bottom: 20px
 
   &__list
     display: flex
@@ -12,6 +14,10 @@
     justify-content: space-between
     @include mediaDesktop
       flex-wrap: wrap
+    @include mediaPhone
+      gap: 30px
+    @include mediaPhoneMid
+      gap: 20px
 
   &__item
     flex-grow: 1
@@ -29,6 +35,10 @@
       max-width: unset
     @include mediaTablet
       flex-basis: 46%
+    @include mediaPhone
+      flex-basis: 45%
+    @include mediaPhoneMid
+      flex-basis: 44%
 
   &__img
     width: 48px
