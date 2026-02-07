@@ -3,13 +3,32 @@
   //padding-bottom: var(--sectionPaddingBottom)
 
   &__container
-    background: url("../images/bg/men.png") left bottom -5px / contain no-repeat
+    background-image: url("../images/bg/men.png")
+    background-position: left bottom -5px
+    background-size: contain
+    background-repeat: no-repeat
+    @include mediaTablet
+      background-position: -50% 0
+    @include mediaPhone
+      // background-position-x: -100%
+      background-size: 600px
+      background-position-x: -280px
+      // background-position-y: top
+    @include mediaPhoneMid
+      // background-size: 80% 100%
+    @include mediaPhoneSm
+      // background-position-x: 80%
   &__head
+    @include mediaTablet
+      margin-bottom: 24px
+
   &__wrap
     display: flex
     align-items: stretch
     gap: 20px
     padding-bottom: 78px
+    @include mediaTablet
+      justify-content: flex-end
 
   &__contact
     flex-basis: 48%
@@ -18,12 +37,18 @@
     display: flex
     align-items: flex-end
     justify-content: center
+    @include mediaTablet
+      display: none
     // a
     //   margin-top: auto
 
   &__description
     flex-basis: 48%
     flex-grow: 1
+    @include mediaTablet
+      max-width: 80%
+    @include mediaPhone
+      max-width: unset
 
   &__us
     background-color: $alabaster
@@ -31,6 +56,10 @@
     padding: 20px
     padding-right: 90px
     margin-bottom: 20px
+    @include mediaPhone
+      max-width: 80%
+      margin-left: auto
+      padding: 10px
 
   &__text
     margin-top: 20px
@@ -45,3 +74,5 @@
     border-radius: 20px
     padding: 20px
     color: $white
+    @include mediaPhone
+      padding: 10px

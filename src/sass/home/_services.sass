@@ -2,15 +2,25 @@
   padding-top: 80px
   padding-bottom: 80px
   background: url("../images/bg/services.jpg") center / cover no-repeat
+  @include mediaPhone
+    padding-top: 25px
+    padding-bottom: 25px
 
   & .container-right
     box-sizing: border-box
     width: 100%
     position: relative
+    @include mediaPhoneSm
+      margin: 0 auto
+      padding: 0 15px
+      width: 100%
+
 
   &__head
     color: $white
     margin-bottom: 40px
+    @include mediaPhone
+      margin-bottom: 25px
 
   &__slider
     margin-bottom: 50px
@@ -19,12 +29,17 @@
     border-top-left-radius: 25px
     border-bottom-left-radius: 25px
     overflow: hidden
+    @include mediaPhoneMid
+      height: 480px
+      // max-width: 480px
     // position: relative
     // max-height: 530px
     &-wrap
       box-sizing: border-box
       height: 530px
       column-gap: 0
+      @include mediaPhoneMid
+        height: 480px
       // width: 100%
       // display: flex
   &__slide
@@ -37,11 +52,21 @@
     display: flex
     flex-direction: column
     max-width: 390px
+    @include mediaPhoneMid
+      height: 480px
+      padding: 20px 27px
+      // margin: 0 -10px
+    @include mediaPhoneSm
+      width: 100%
+      max-width: unset
   &__img
     height: 280px
     border-radius: 15px
     margin-bottom: 20px
     overflow: hidden
+    @include mediaPhoneSm
+      img
+        width: 100%
   &__name
     font-size: 32px
     font-weight: 700
@@ -49,8 +74,13 @@
     color: $grey
     margin-bottom: 10px
     border-bottom: 1px solid $text
+    margin-top: auto
+    @include mediaPhoneMid
+      font-size: 22px
   &__descr
     font-size: 20px
+    @include mediaPhoneMid
+      font-size: 16px
   &__navigation
     position: absolute
     top: 0
@@ -67,6 +97,7 @@
       left: unset
       justify-content: center
       margin-bottom: 32px
+      gap: 120px
 
 
   &__btns
@@ -86,3 +117,5 @@
   &__btn
     display: flex
     justify-content: center
+    @include mediaPhoneSm
+      width: 100%

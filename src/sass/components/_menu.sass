@@ -8,18 +8,25 @@
   // margin-left: 50px
   &__body
     // margin-top: -5px
-    @include mediaPhone
+    // @include mediaPhone
+    @include mediaTablet
       position: fixed
-      top: 0
+      top: 30px
       right: -100%
-      width: 100%
-      height: 100%
-      padding: 150px 30px 50px 30px
+      width: 50%
+      height: auto
+      padding: 100px 30px 30px 30px
       // ---------- ЦВЕТ ФОНА У МЕНЮ
-      background-color: rgba($text, 0.9)
+      background-color: $bgc
       overflow: auto
       transition: right 0.3s ease
+      border-radius: 30px
       z-index: 2
+      box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.02), 1px 2px 5px 0 rgba(0, 0, 0, 0.03), 3px 4px 10px 0 rgba(0, 0, 0, 0.04), 5px 8px 17px 0 rgba(0, 0, 0, 0.04), 8px 14px 31px 0 rgba(0, 0, 0, 0.05), 12px 22px 51px 0 rgba(0, 0, 0, 0.06), 18px 31px 80px 0 rgba(0, 0, 0, 0.08)
+      @include mediaPhoneMid
+        width: 65%
+      @include mediaPhoneSm
+        width: 85%
       // justify-content: flex-end
       // подложка под верхнее меню, если оно имеет фон
       // &::before
@@ -35,7 +42,7 @@
       //   transition: right 0.3s ease
       //   z-index: 2
     &._active
-      right: 0
+      right: 35px
       // для ORDER меню 
       display: flex
       flex-direction: column
@@ -44,14 +51,14 @@
   &__list
     @include fx-all
     flex-wrap: wrap
-    column-gap: 39px
+    column-gap: 25px
     justify-content: flex-end
-    row-gap: 10px
+    row-gap: 1px
     @include mediaNotebook
       // flex-wrap: wrap
-    @include mediaPhone
+    @include mediaTablet
       flex-direction: column
-      align-items: flex-end
+      align-items: flex-start
       justify-content: flex-start
       order: 2
       margin-bottom: 20px
@@ -64,7 +71,7 @@
         width: 11px
         height: 11px
         background: url("../images/icons/sprite.svg#arrow-down") center / cover no-repeat
-        @include mediaPhone
+        @include mediaTablet
           width: 22px
           height: 22px
           // padding: 7px
@@ -82,13 +89,13 @@
         &:last-child a
           color: $white
       @include mediaNotebook
-        padding: 15px 10px
-        margin-bottom: 7px
+        padding: 10px
+        // margin-bottom: 7px
       @include mediaPhone
         width: 100%
         padding: 10px 0px
         margin-bottom: 0
-        color: $white
+        color: $grey
         text-align: right
     & li.current-menu-item a
       background-color: lighten($black, 3)
@@ -96,7 +103,7 @@
       position: absolute
       left: 0
       width: auto
-      background-color: lighten($black, 1)
+      background-color: $alabaster
       z-index: 50
       //display: none
       overflow: hidden
@@ -113,7 +120,7 @@
       max-height: 500px
       opacity: 1
       pointer-events: initial
-      top: 60px
+      top: 35px
       transition: top 0.3s
       @include mediaPhone
         top: 0
@@ -121,7 +128,7 @@
     & li ul li
       width: 100%
       border-top: 1px solid rgba(0, 0, 0, 0.2)
-      @include mediaPhone
+      @include mediaTablet
         border: none
         & a
           padding-left: 40px
@@ -181,12 +188,12 @@
     //       transform: translate(0px, 0px)
     //     .menu__arrow
     //       transform: rotate(-180deg)
-    @include mediaPhone
+    @include mediaTablet
       margin-bottom: 10px
       font-weight: 800
-      font-size: 32px
+      font-size: 26px
       // ---------- ЦВЕТ ССЫЛОК НА МОБИЛКАХ
-      color: $text
+      color: $grey
       &::before
         content: none
       &:not(:last-child)
@@ -236,7 +243,7 @@
 
   &__icon
     display: none
-    @include mediaPhone
+    @include mediaTablet
       display: block
       position: relative
       //flex: 0 0 32px
@@ -256,7 +263,7 @@
       left: 0
       width: 100%
       height: var(--weight-span) // ---------- ТОЛЩИНА ПОЛОСКИ У БУРГЕРА
-      background-color: rgba($text, 0.9) // ---------- ЦВЕТ ПОЛОСОК У БУРГЕРА
+      background-color: $grey // ---------- ЦВЕТ ПОЛОСОК У БУРГЕРА
       &:first-child
         top: 0
         transition: transform .3s ease-in-out, top .3s ease-in-out, background-color .5s ease-out
@@ -267,7 +274,7 @@
     &._active
       span
         transform: scale(0)
-        background-color: $white // ---------- ЦВЕТ ПОЛОСОК У БУРГЕРА ПРИ ЗАКРЫТИИ
+        background-color: $grey // ---------- ЦВЕТ ПОЛОСОК У БУРГЕРА ПРИ ЗАКРЫТИИ
         transition: transform 0.3s ease-in-out, background-color .5s ease-out
         &:first-child
           top: calc( 50% - 2px )
@@ -283,7 +290,7 @@
   &-languages
     & li a::after
       top: 0 !important
-    @include mediaPhone
+    @include mediaTablet
       align-self: flex-end
       order: 1
       & li
@@ -312,7 +319,7 @@
               background-color: $black
 
     // меню языков в строку на мобилках 
-    @include mediaPhone
+    @include mediaTablet
       & li
         display: flex
         align-items: center

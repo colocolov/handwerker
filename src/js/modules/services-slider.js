@@ -29,10 +29,10 @@ if (_vars.servicesSliderEl) {
       // для ппрвильного направления
     },
     // показ кол-ва слайдов (работает, когда откл effect: "fade")
-    slidesPerView: 3,
+    slidesPerView: 1,
     // расстояние между слайдами
     // spaceBetween: gap, // свой размер
-    spaceBetween: 20,
+    spaceBetween: 0,
     // кол-во пролистываемых слайдов
     slidesPerGroup: 1,
     // стартовый слайд
@@ -42,13 +42,25 @@ if (_vars.servicesSliderEl) {
     // centeredSlides: true,
     
     // адаптив
-    // breakpoints: {
-      // when window width is >= 320px
-    //   480: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20,
-    //   },
-    // },
+    breakpoints: {
+      //when window width is >= 320px
+      1024: {
+        slidesPerView: 3.2,
+      },
+      992: {
+        slidesPerView: 2.5,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      480: {
+        slidesPerView: 1,
+      },
+    },
 
     //отложенная загрузка:
     //отключаем презагрузку картинок
