@@ -9,6 +9,10 @@
   background-color: $bgc
 
   &__container
+    @include mediaTablet
+      padding-left: 0
+      padding-right: 0
+
 
   &__head
     text-align: center
@@ -20,6 +24,11 @@
     &-wrap
       // display: flex
       // gap: 80px
+    & .swiper-slide
+      opacity: 0
+      transition: opacity 0.3s ease-in, margin-top 0.3s ease-in-out
+    & .swiper-slide-visible
+      opacity: 1
   &__slide
     height: 500px
     width: 400px
@@ -43,3 +52,12 @@
   &--next
     background-color: $white
     box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.02), 3px 12px 15px 0 rgba(0, 0, 0, 0.04), 8px 29px 40px 0 rgba(0, 0, 0, 0.05), 16px 58px 91px 0 rgba(0, 0, 0, 0.07)
+
+  &__btn
+    display: flex
+    justify-content: center
+    @include mediaTablet
+      padding-left: 15px
+      padding-right: 15px
+    @include mediaPhoneSm
+      width: 100%

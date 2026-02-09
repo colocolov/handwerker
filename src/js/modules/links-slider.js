@@ -28,11 +28,12 @@ if (_vars.linksSliderEl) {
       clickable: true,
       // для ппрвильного направления
     },
+    watchSlidesProgress: true,
     // показ кол-ва слайдов (работает, когда откл effect: "fade")
-    slidesPerView: 3,
+    slidesPerView: 1.1,
     // расстояние между слайдами
     // spaceBetween: gap, // свой размер
-    spaceBetween: 80,
+    spaceBetween: 10,
     // кол-во пролистываемых слайдов
     slidesPerGroup: 1,
     // стартовый слайд
@@ -41,7 +42,23 @@ if (_vars.linksSliderEl) {
     // активный слайд по центру
     centeredSlides: true,
     
- 
+    breakpoints: {
+      1238: {
+        slidesPerView: 3,
+        spaceBetween: 80,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      992: {
+        spaceBetween: 40,
+      },
+      576: {
+        slidesPerView: 1.4,
+        spaceBetween: 20,
+      },
+    },
 
     //отложенная загрузка:
     //отключаем презагрузку картинок

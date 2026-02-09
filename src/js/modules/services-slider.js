@@ -28,11 +28,12 @@ if (_vars.servicesSliderEl) {
       clickable: true,
       // для ппрвильного направления
     },
+    watchSlidesProgress: true,
     // показ кол-ва слайдов (работает, когда откл effect: "fade")
     slidesPerView: 1,
     // расстояние между слайдами
     // spaceBetween: gap, // свой размер
-    spaceBetween: 0,
+    spaceBetween: 20,
     // кол-во пролистываемых слайдов
     slidesPerGroup: 1,
     // стартовый слайд
@@ -52,13 +53,9 @@ if (_vars.servicesSliderEl) {
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 20,
       },
       576: {
-        slidesPerView: 1,
-      },
-      480: {
-        slidesPerView: 1,
+        slidesPerView: 1.5,
       },
     },
 

@@ -11,7 +11,8 @@ import "./modules/animateHeader.js";
 // import "./modules/animateProgresLine.js";
 import "./modules/services-slider.js";
 import "./modules/links-slider.js";
-import "./modules/paralax-bg.js";
+
+import "./modules/paralax.js";
 
 //import "./modules/modal.js";
 

@@ -19,39 +19,6 @@ function documentActions(e) {
   }
 }
 
-// проверка, является ли уствройство мобильным
-const isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
-
-if (isMobile.any()) {
-  // document.querySelector('html').classList.add('_touch');
-  document.body.classList.add("_touch");
-}
-
 // меню бургер
 const body = document.querySelector(".page__body");
 const iconMenu = document.querySelector(".menu__icon");
@@ -71,6 +38,25 @@ if (menuLink.length) {
       removeActiveClass();
     });
   });
+}
+
+if (window.innerWidth <= 992) {
+  document.addEventListener('click', function (e) {
+  if (!menuBody || !iconMenu) return;
+
+  const clickInsideMenu = e.target.closest('.menu__body');
+  const clickOnBurger = e.target.closest('.menu__icon');
+
+  // если меню открыто и клик вне меню и не по бургеру
+  if (
+    menuBody.classList.contains('_active') &&
+    !clickInsideMenu &&
+    !clickOnBurger
+  ) {
+    removeActiveClass();
+  }
+});
+
 }
 
 function removeActiveClass() {
